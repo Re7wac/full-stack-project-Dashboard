@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Link, withRouter } from "react-router-dom";
 
 import classnames from "classnames";
+import { Container } from "react-bootstrap";
 
 class Register extends Component {
   constructor() {
@@ -15,11 +16,11 @@ class Register extends Component {
     };
   }
 
-  onChange = (e) => {
+  onChange = e => {
     this.setState({ [e.target.id]: e.target.value });
   };
 
-  onSubmit = (e) => {
+  onSubmit = e => {
     e.preventDefault();
 
     const newUser = {
@@ -36,7 +37,7 @@ class Register extends Component {
     const { errors } = this.state;
 
     return (
-      <div className="container">
+      <Container>
         <div className="row  bg-dark">
           <div className="col-12 justify-content-center">
             <Link to="/" className="btn-flat waves-effect">
@@ -125,7 +126,7 @@ class Register extends Component {
             </form>
           </div>
         </div>
-      </div>
+      </Container>
     );
   }
 }

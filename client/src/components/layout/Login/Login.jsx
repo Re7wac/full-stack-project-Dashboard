@@ -13,11 +13,11 @@ class Login extends Component {
     };
   }
 
-  onChange = (e) => {
+  onChange = e => {
     this.setState({ [e.target.id]: e.target.value });
   };
 
-  onSubmit = (e) => {
+  onSubmit = e => {
     e.preventDefault();
 
     const userData = {
@@ -93,7 +93,7 @@ class Login extends Component {
                   type="submit"
                   className="btn btn-large waves-effect waves-light hoverable blue accent-3"
                 >
-                  Login
+                  <Link to="dashboard">Login</Link>
                 </button>
               </div>
             </form>
